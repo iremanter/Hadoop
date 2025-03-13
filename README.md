@@ -129,3 +129,9 @@ chmod 777 mapper.py reducer.py
 **RESULT:**
 
 The job consists of 15 splits and runs through the map phase to completion. Also, the job has been checked by using a web interface to ensure that the job is successfully done. Finally, dataout has been checked to obtain the result. According to the result, the highest value of total amount is 4009.3, the lowest amount is 0.01 and the mean value of the total amount is 15.1.
+
+<img width="637" alt="Screenshot 2025-03-14 at 00 04 31" src="https://github.com/user-attachments/assets/d6abb428-52f9-4d87-b4b6-dd9768df4534" />
+
+
+As shown in the pie chart above, 83.5% of taxi rides fall between $0 to $20, with 42.2% of the rides under $10 and 41.3% between $10 and $20.
+
