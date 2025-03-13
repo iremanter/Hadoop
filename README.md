@@ -1,4 +1,4 @@
-# Hadoop
+# Hadoop-Cluster-with-Docker-for-NYC-Taxi-Analysis
 
 Mac (Apple Chip M1, M2, M3) Users: Open a Terminal and pull the image:
 
