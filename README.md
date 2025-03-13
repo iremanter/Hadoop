@@ -123,3 +123,5 @@ hdfs dfs -rm -r /user/root/test
 List files/folders in HDFS: 
 
 hdfs dfs -ls /user/root
+
+chmod 777 mapper.py reducer.py
