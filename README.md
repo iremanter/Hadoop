@@ -97,7 +97,7 @@ hadoop fs -mkdir -p /home/datasrc/bigDataTask
 
 Upload the file to HDFS:
 
-hadoop fs -put Books_rating.csv /home/datasrc/bigDataTask
+hadoop fs -put /home/datasrc/taxi_trip.csv /home/datasrc/bigDataTask
 
 Make sure the file is uploaded:
 
@@ -105,7 +105,7 @@ hadoop fs -ls /home/datasrc/bigDataTask
 
 Checking the Size of the File:
 
-hdfs dfs -du -h /home/datasrc/bigDataTask/Books_rating.csv
+hdfs dfs -du -h /home/datasrc/bigDataTask/taxi_trip.csv
 
 See the number of blocks:
 
@@ -125,3 +125,7 @@ List files/folders in HDFS:
 hdfs dfs -ls /user/root
 
 chmod 777 mapper.py reducer.py
+
+**RESULT:**
+
+The job consists of 15 splits and runs through the map phase to completion. Also, the job has been checked by using a web interface to ensure that the job is successfully done. Finally, dataout has been checked to obtain the result. According to the result, the highest value of total amount is 4009.3, the lowest amount is 0.01 and the mean value of the total amount is 15.1.
