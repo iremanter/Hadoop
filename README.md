@@ -128,10 +128,18 @@ chmod 777 mapper.py reducer.py
 
 **RESULT:**
 
+Further analysis were conducted by using Python.
+
 The job consists of 15 splits and runs through the map phase to completion. Also, the job has been checked by using a web interface to ensure that the job is successfully done. Finally, dataout has been checked to obtain the result. According to the result, the highest value of total amount is 4009.3, the lowest amount is 0.01 and the mean value of the total amount is 15.1.
 
 <img width="637" alt="Screenshot 2025-03-14 at 00 04 31" src="https://github.com/user-attachments/assets/d6abb428-52f9-4d87-b4b6-dd9768df4534" />
 
 
 As shown in the pie chart above, 83.5% of taxi rides fall between $0 to $20, with 42.2% of the rides under $10 and 41.3% between $10 and $20.
+
+<img width="647" alt="Screenshot 2025-03-14 at 00 13 29" src="https://github.com/user-attachments/assets/e320746e-54c8-471a-a5bd-0ffa67624283" />
+
+The scatter plot illustrates that there is a cluster type relationship between the total amount and the tip amount. Most trips are for small to moderate tips-four. However, a few outliers show unusually large tips given for high fares.
+
+The bar chart shows that the average amount of a tip generally increases with the increase in total fare, reaching it maximum value of above $17 for those trips whose fares are above 100.
 
