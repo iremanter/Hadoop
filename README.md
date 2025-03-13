@@ -3,6 +3,7 @@
 Mac (Apple Chip M1, M2, M3) Users: Open a Terminal and pull the image:
 
 docker pull bugbond/hadoop-spark-pig-hive-arm64
+
 Run the services:
 
 docker run -it --name bigtools -p 9000:9000 -p 2122:2122 -p 50070:50070 -p 50010:50010 -p 50075:50075 -p 50020:50020 -p 50090:50090 -p 8088:8088 -p 8030:8030 -p 8031:8031 -p 8032:8032 -p 8033:8033 -p 8040:8040 -p 8042:8042 -p 8080:8080 -p 8081:8081 -p 10000:10000 -p 9083:9083 bugbond/hadoop-spark-pig-hive-arm64:latest bash
@@ -50,6 +51,7 @@ Port Number Explained
 Note: Use the below command if you exit Hadoop container and wanna re-run the created container and get access to your previous work:
 
 docker exec -it myhadoop bash
+
 To access Hadoop Web Interface, Open a browser window/tab and navigate to http://localhost:50070, and Spark at http://localhost:8080
 
 Update Ubuntu: apt update
@@ -61,6 +63,7 @@ Verify Hadoop Installation ls /usr/local/hadoop
 Set Up Environment Variables:
 
 nano ~/.bashrc
+
 Add the following lines:
 
 export HADOOP_HOME=/usr/local/hadoop
@@ -69,6 +72,7 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 Source the ~/.bashrc file:
 
 source ~/.bashrc
+
 Note: If, for any reason, Hadoop stops working, use the following commands to restart it:
 
 stop-dfs.sh
@@ -86,25 +90,36 @@ Unzip the extracted folder
 Open a new Command Prompot or Terminal window and copy the downloaded file to the container. The container ID looks like e.g. 3d6c17a05e33 extracted from root@3d6c17a05e33:~# prompt.
 
 docker cp Books_rating.csv 3d6c17a05e33:/home/datasrc 
+
 Create a directory in HDFS:
 
 hadoop fs -mkdir -p /home/datasrc/bigDataTask
+
 Upload the file to HDFS:
 
 hadoop fs -put Books_rating.csv /home/datasrc/bigDataTask
-Make sure the file is uploaded
+
+Make sure the file is uploaded:
 
 hadoop fs -ls /home/datasrc/bigDataTask
-Checking the Size of the File
+
+Checking the Size of the File:
 
 hdfs dfs -du -h /home/datasrc/bigDataTask/Books_rating.csv
-See the number of blocks
+
+See the number of blocks:
 
 hadoop fsck /home/datasrc/bigDataTask
 Note
 
-Create a directory in HDFS: hdfs dfs -mkdir -p /user/root/test
+Create a directory in HDFS: 
 
-Remove a directory in HDFS: hdfs dfs -rm -r /user/root/test
+hdfs dfs -mkdir -p /user/root/test
 
-List files/folders in HDFS: hdfs dfs -ls /user/root
+Remove a directory in HDFS: 
+
+hdfs dfs -rm -r /user/root/test
+
+List files/folders in HDFS: 
+
+hdfs dfs -ls /user/root
